@@ -12,7 +12,10 @@
     </div>
     <div class="middle">
       <div class="middle_div">
-        <div class="middle_logo"></div>
+        <div class="middle_logo">
+          <img src="../assets/logo.jpg" style="width: 90px;height: 32px">
+        </div>
+
         <ul></ul>
         <div class="middle_div_right">
           <div class="middle_div_right_div">
@@ -20,7 +23,9 @@
               <div style="padding: 0 30px 0 14px;cursor: pointer">
                 <span style="font-size: 14px;color: #fff;line-height: 32px">装修公司</span>
                 <i class="i"></i>
-                <span class="middle_div_right_span"></span>
+                <span class="middle_div_right_span">
+
+                </span>
               </div>
               <ul>
 
@@ -29,17 +34,23 @@
             <div class="text_box">
               <input type="text" placeholder="挑选您心仪的装修公司">
             </div>
-            <span class="sou"></span>
+<!--            <el-button type="primary" class="sou" icon="el-icon-search"></el-button>-->
+            <i class="el-icon-search sou"></i>
           </div>
         </div>
       </div>
     </div>
+    <home1/>
   </div>
 </template>
 
 <script>
+import home1 from "./home1";
 export default {
   name: 'Home',
+  components:{
+    home1
+  },
   data(){
     return{
       activity:['登录','注册','我要装修','咨询电话：123-123','设计本','新闻中心'],
@@ -51,7 +62,7 @@ export default {
 <style lang="less" scoped>
 .head{
   height: 35px;
-  width: 1220px;
+  width: 1420px;
   margin: auto;
   display: flex;
   padding: 0 ;
@@ -63,7 +74,7 @@ export default {
   font-weight: 400;
 }
 .head>div:nth-child(2){
-  flex: 0.7;
+  flex: 0.5;
   display: flex;
   justify-content: space-between;
 }
@@ -74,7 +85,7 @@ export default {
   font-weight: 400;
 }
 .middle_div{
-  width: 1220px;
+  width: 1420px;
   margin: 0 auto;
 }
 .middle_logo{
@@ -123,10 +134,12 @@ export default {
   outline: none;
 }
 .sou{
-  width: 18px;
-  height: 18px;
-  margin: 9px 12px 0;
-  background: salmon;
-  float: right;
+
+  width: 17px;
+  font-size: 20px;
+  margin: 6px 12px 0;
+  color: white;
+  cursor: pointer;
 }
+
 </style>
